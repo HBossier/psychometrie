@@ -45,8 +45,67 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 \item $s \times v(b)$
 
 \end{enumerate} 
+
+
 \end{enumerate}
 }
 
 
+\OPGAVE
+{
+\section{Generaliseerbaarheidstheorie - extra voorbeeld 2}
+
+\begin{enumerate}
+
+\item
+Een verkorte vorm van de TAT (Thematic Apperception Test), bestaande uit 10 kaarten, wordt afgenomen bij 50
+jongvolwassen delinquenten ($d$). 
+De TAT is zo opgesteld dat de juveniele delinquent bij elk van de 10 kaarten ($k$) een verhaal moet vertellen dat aansluit bij de tekening op de kaart.
+De tien verhalen werden op video opgenomen en later beoordeeld.
+3 klinische psychologen ($p$) beoordeelden elk de graad van \emph{rejection of authority} op een schaal van 0 tot 100. 
+De finale score op de TAT is het gemiddelde van de 30 metingen per subject.
+[naar Hoofdstuk 8 oef 3.a uit Crocker and Algina (2008). \emph{Introduction to Classical and Modern Test Theory}.]
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+ & $ \hat{\sigma}^2_{s} $ & $ \hat{\sigma}^2_{k} $& $ \hat{\sigma}^2_{p} $ & $ \hat{\sigma}^2_{sk} $ & $ \hat{\sigma}^2_{sp} $ & $ \hat{\sigma}^2_{kp} $ & $ \hat{\sigma}^2_{skp,e} $ \\ \hline
+Waarde  & $ 167.64 $ & $ 3.211 $ & $615.8 $ & $ 1.3 $ & $ 84.7 $ & $ 1.3 $ & $ 1.2 $ \\ 
+\% Var & 0.1923& 0.004& 0.704& 0.001& 0.097& 0.001& 0.001 \\ \hline
+\end{tabular}
+\end{center}
+% v <- c(167.64,3.211,615.8,1.3,84.7,1.3,1.2)
+
+\normalsize
+De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoorden.
+
+\begin{enumerate}
+	\item Schrijf deze opstelling uit.
+	\item JUIST of FOUT: ``In deze opstelling kunnen er meer variantie-componenten worden onderscheiden dan wanneer elke $p$ een beperkte (unieke) set van vragen toebedeeld krijgt. Bvb. $p_1$ beoordeelt kaarten 1-4, $p_2$ kaarten 5-8 en tot slot $p_3$ kaarten 9 en 10"?
+	\item Bereken de generaliseerbaarheidsco\"{e}ffici\"{e}nt (G) voor dit design.
+	\item \emph{tip: schrijf bij deze vraag telkens eerst het opzet uit}\\
+	Welke variantie-componenten kunnen niet meer van elkaar onderscheiden worden indien ... 
+\begin{itemize}
+	\item ... $p_1$ vragen 1-4 beoordeelt, $p_2$ vragen 5-8 en $p_3$ vragen 9 en 10?
+	\item ... door tijdsgebrek 25 subjecten kaarten 1-3 aangeboden kregen en 25 andere subjecten kaarten 4-6; bovendien beoordeelt $p_1$ kaarten 1 en 4, $p_2$ kaarten 2 en 5 en $p_3$ kaarten 3 en 6.
+\end{itemize}
+\item Bereken voor het eerste scenario de $G$-co\"{e}ffici\"{e}nt en voor het tweede scenario de index of dependability $\phi$. Waar ligt het verschil tussen beide maten?
+\end{enumerate}
+\end{enumerate}
+}
+
+\OPLOSSING
+{
+\textbf{Oplossingen}
+\begin{enumerate}
+\item JUIST.
+\item $s \times k \times p$
+\item 
+\begin{itemize}
+	\item Het opzet wordt hier: $s\times p\left(k\right)$ bijgevolg kunnen de variantiecomponenten $\sigma_p$ en $\sigma_{kp}$ niet onderscheiden worden van elkaar (wordt $\sigma_{pk,p}$) en ook $\sigma_{sp}$ kan niet van de residuele variantie-term worden onderscheiden (wordt $\sigma_{sp, spk,e}$).
+	\item Het opzet wordt hier: $k\left(p\times s\right)$ bijgevolg kunnen de variantiecomponenten $\sigma_k$ en $\sigma_{kp}$, $\sigma_{ks}$ niet onderscheiden worden van  van de residuele variantie-term worden onderscheiden (wordt $\sigma_{k, kp, ks, spk, e}$).  
+\end{itemize}
+\item NOG UIT TE REKENEN.
+\end{enumerate} 
+}
 
