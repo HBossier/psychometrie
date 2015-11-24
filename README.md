@@ -4,17 +4,17 @@
 Generaliseerbaarheidstheorie.
 
 
-##Structuur van files
+## Structuur van files
 * gen.tex: master file die verwijst naar generaliseerbaarheid.tex
 * generaliseerbaarheid.tex: De effectieve oefeningen.
 
-##Members
+## Members
 * [Han Bossier]
 * [Sanne Roels]
 * [Prof. W. De Corte]
 
  
-##Extra info
+## Extra info
 Zie Minerva
 
 
