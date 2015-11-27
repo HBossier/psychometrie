@@ -88,7 +88,7 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 	\item ... $p_1$ vragen 1-4 beoordeelt, $p_2$ vragen 5-8 en $p_3$ vragen 9 en 10?
 	\item ... door tijdsgebrek 25 subjecten kaarten 1-3 aangeboden kregen en 25 andere subjecten kaarten 4-6; bovendien beoordeelt $p_1$ kaarten 1 en 4, $p_2$ kaarten 2 en 5 en $p_3$ kaarten 3 en 6.
 \end{itemize}
-\item Bereken voor het eerste scenario de $G$-co\"{e}ffici\"{e}nt en voor het tweede scenario de index of dependability $\phi$. Waar ligt het verschil tussen beide maten?
+\item Bereken voor het eerste scenario uit (d) de $G$-co\"{e}ffici\"{e}nt en voor het tweede scenario de index of dependability $\phi$. Waar ligt het verschil tussen beide maten?
 \end{enumerate}
 \end{enumerate}
 }
@@ -105,21 +105,65 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 	\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
 	 & $ \hat{\sigma}^2_{d}$ & $ \hat{\sigma}^2_{k} $& $ \hat{\sigma}^2_{p,kp} $ & $ \hat{\sigma}^2_{dk}$ & $\hat{\sigma}^2_{kp} $ & $ \hat{\sigma}^2_{dp} $& $ \hat{\sigma}^2_{dp, dkp, e} $ \\ \hline
 	$\sigma$  			& $ 167.64 $ 			& $ 3.211 $ 			& $615.8+1.3  $ 			& $ 1.3 $				 & $. $	& $ . $& $ 1.2 + 84.7  $ \\
-	$n$ 				& 50					& 10					& 30				 		& 50*10			  		 & $. $	& $ . $&  1500 \\ \hline
-	$\sigma / n$ 		& 3.3528				& 0.3211				& 20.57				 		& 0.0026			  	 & $. $	& $ . $&  0.0573 \\ \hline
+	$n_.$				& .						& 10					& 30				 		& 10			  		 & $. $	& $ . $&  30 \\ \hline
+	$\sigma / n$ 		& .						& 0.3211				& 20.57				 		& 0.13			  	 & $. $	& $ . $&  2.8633 \\ \hline
 	\end{tabular}
 	\item Het opzet wordt hier: $k\left(p\times d\right)$ bijgevolg kunnen de variantiecomponenten $\sigma_k$ en $\sigma_{kp}$, $\sigma_{kd}$ niet onderscheiden worden van  van de residuele variantie-term worden onderscheiden (wordt $\sigma_{k, kp, ks, spk, e}$).\\Dit zijn de te onderscheiden componenten:\\ Merk hierbij opnieuw op dat het object van meting $d$ is. \\
 	\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
 	 & $ \hat{\sigma}^2_{d} $ & $ \hat{\sigma}^2_{k} $& $ \hat{\sigma}^2_{p} $ & $ \hat{\sigma}^2_{dk} $ & $ \hat{\sigma}^2_{dp} $ & $ \hat{\sigma}^2_{kp} $ & 
-	 $\sigma_{k, kp, dk, spk, e}$ \\ \hline
+	 $\sigma_{k, kp, dk, dpk, e}$ \\ \hline
 	$\sigma$  			& $ 167.64 $ 			& $. $ 			& $615.8 $ 	  & $.$				 & $84.7 $	& $ . $& $ 1.2 + 84.7 +  3.211 +1.3$ \\
-	$n$ 				& 50					& $.$			& 3			  & $.$		  		 & $3*10$		& $ . $&  3*50 *10 \\ \hline
-	$\sigma / n$        & 3.3528				& $. $			& 20.57		  & $.$			  	 & $. $		& $ . $&  0.0573 \\ \hline
+	$n_.$ 				& . 					& $.$			& 3			  & $.$		  		 & $3*10$	& $ . $&  3 *10 \\ \hline
+	$\sigma / n_.$     & .				& $. $			& $205.2333$  & $.$			  	 & $2.8233$	& $ . $&  0.0603 \\ \hline
 	\end{tabular}
 \end{itemize}
 %v <- c(167.64,3.211,615.8,1.3,84.7,1.3,1.2)
 %np =3
 %nk =10 
-\item NOG UIT TE REKENEN.
+\item Respectievelijk de $G$ en $\phi$ co\"effici\"ent:
+\begin{itemize}
+	% G-coefficient
+	\item     
+	\begin{align}
+		G &=\dfrac{\sigma^2_{Obj~v.~met.}}{\sigma^2_{Obj~v.~met.}+ \sigma^2_{rel.~meting}} \label{eq.G}
+	\end{align}
+	Houd voorts rekening met volgende niet te onderscheiden variantiecomponenten:~ \\
+	$ \bm{\hat{\sigma}^2_{p,kp}} $~en~$\bm{\hat{\sigma}^2_{dp, dkp, e} }$.\\
+	We berekenen hiervoor eerst $\sigma^2_{rel.~meting}$
+	\begin{align*}
+		\sigma^2_{rel.~meting} 	&=  \dfrac{\hat{\sigma}^2_{dk}}{n_k} + \dfrac{\hat{\sigma}^2_{dp,dpk,e}}{n_p*n_k} \\
+								&=  \dfrac{{1.3}}{10} + \dfrac{{1.2 + 84.7}}{3*10}\\
+								&= 0.13 + 2.8633 &=2.9933
+	\end{align*}
+	Bijgevolg kan $G$ opgesteld worden door $\sigma^2_{rel.~meting}$ en $\hat{\sigma}^2_{d}$ in te vullen in vergelijking \ref{eq.G}:
+	\begin{align*}
+		G 	&=\dfrac{167.64}{167.64+ 2.9933}\\
+			&=\dfrac{167.64}{170.6333}&=0.9825
+	\end{align*}
+	
+	% PHI-coefficient
+	\item 
+	\begin{align}
+		\phi =\dfrac{\sigma^2_{Obj~v.~met.}}{\sigma^2_{Obj~v.~met.}+ \sigma^2_{abs.~meting}} \label{eq.phi}
+	\end{align}
+	Houd voorts rekening met volgende niet te onderscheiden variantiecomponenten:~ \\
+	$\bm{\sigma_k},\bm{\sigma_{kp}} , \bm{\sigma_{kd}} en \bm{\sigma_{dkp, e}}$.\\
+	We berekenen hiervoor eerst $\sigma^2_{abs.~meting}$
+	\begin{align*}
+		\sigma^2_{abs.~meting} 	&=  \dfrac{\hat{\sigma}^2_{p}}{n_p} + \dfrac{\hat{\sigma}^2_{k, kp, dk, dpk, e}}{n_p*n_k} \\
+								&=  \dfrac{{615.8}}{3} + \dfrac{{1.2 + 84.7 +  3.211 +1.3}}{3*10}\\
+								&= 205.2333 + 3.0137 &=2.9933
+	\end{align*}
+	Bijgevolg kan $G$ opgesteld worden door $\sigma^2_{rel.~meting}$ en $\hat{\sigma}^2_{d}$ in te vullen in vergelijking \ref{eq.phi}:
+	\begin{align*}
+		\phi 	&=\dfrac{167.64}{167.64+ 208.247}\\
+				&=\dfrac{167.64}{375.887}=0.4460
+	\end{align*}
+	\item \begin{description}
+		\item[$G$] Door gebruik te maken van de relatieven metingen wordt XXXX
+		\item[$\phi$] Door gebruik te maken van de absolute metingen wordt de meetnauwkeurigheid van een meetprocedure uitgedrukt door deze co\"efficient.
+		Dit heeft betrekking tot de bepaling van de \emph{universum}score.
+	\end{description}
+\end{itemize}
 \end{enumerate}
 }

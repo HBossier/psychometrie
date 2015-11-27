@@ -1,12 +1,17 @@
 # Oefening voor Psychometrie 2015-2016
 
 ## Thema
-Generaliseerbaarheidstheorie.
+* Generaliseerbaarheidstheorie
+* Toelichting Additief en Multiplicatieve verhouding
 
 
 ## Structuur van files
-* gen.tex: master file die verwijst naar generaliseerbaarheid.tex
-* generaliseerbaarheid.tex: De effectieve oefeningen.
+* Folder 1: GEN: extra voorbeelden Generaliseerbaarheidstheorie
+	* gen.tex: master file die verwijst naar generaliseerbaarheid.tex
+	* generaliseerbaarheid.tex: De effectieve oefeningen.
+	
+* Folder 2: IRT
+	* additief_multiplicatief.tex : volledige oplossing
 
 ## Members
 * [Han Bossier]

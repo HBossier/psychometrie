@@ -1,0 +1,381 @@
+%
+%       da.sty  
+%
+%       default style package voor vakgroep data-analyse
+%       Y.R. -- 10/07/2002
+%
+
+% Wijzigingen:
+%
+%       6/09/2002 (YR): toevoegen R, SPSS, oplossing flags...
+%       9/10/2002 (YR): - aanpassing layout opgave-oplossing, SPSS+R boxes
+%                       - toevoeging PSYCH en PED flags                      
+%       7/5/2003 (SR): toevoeging PP en PC flags
+%       8/5/2003 (YR): correctie PP macro (accolade), 
+%                      toevoeging 'fancyvrb' package,
+%                      aanpassing geometry: scale=0.8x0.85
+
+
+\def\fileversion{1.2}
+\def\filedate{2002/09/06}
+\ifx\documentclass\undefined
+  \wlog{LaTeX Package `da' \fileversion\space<\filedate>}
+\else
+  \NeedsTeXFormat{LaTeX2e}
+  \ProvidesPackage{da}[\filedate\space\fileversion\space
+                       Vakgroep data-analyse default A4 style package]
+\fi
+
+%% UTF-8 unicode
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+%% geen paragraaf insprong
+\setlength{\parindent}{0cm}
+
+%% wees niet te streng ivm over-full boxes...
+\vfuzz7pt
+\hfuzz7pt
+
+%
+% 
+% geometry
+%
+% - gebruik altijd A4
+% - in het document kun je zelf de 'scale' opgeven
+%   als volgt (in de preamble) \geometry{scale={0.80,0.85}}
+%
+\usepackage[a4paper]{geometry}
+
+% fancyvrb (voor 'UseVerbatim' ...)
+\usepackage{fancyvrb}
+
+% amsmath (voor align*, ...)
+\usepackage{amsmath}
+
+% stmaryrd (voor de \vink ?)
+%\usepackage{stmaryrd}
+
+% ifthen
+\usepackage{ifthen}
+
+
+%
+% handle both latex and pdflatex,
+% dvips and pdf
+%
+%\newif\ifpdf
+%\ifx\pdfoutput\undefined
+%  \pdffalse
+%\else
+%  \pdfoutput=1
+%  \pdftrue
+%\fi
+
+% graphicx and color
+%\ifpdf
+  \usepackage[pdftex]{graphicx,xcolor}
+  %\usepackage{epstopdf}
+  %\pdfcompresslevel=9
+%\else
+%  \usepackage[dvips]{graphicx,color}
+%\fi
+
+% geometry
+%\ifpdf
+  \geometry{pdftex}
+%\else
+%  \geometry{dvips}
+%\fi
+
+% hyperref
+%
+%\ifpdf
+  \usepackage[pdftex,
+              hypertexnames=false,
+              hyperfootnotes=false,
+              colorlinks,
+              linkcolor={blue},
+              citecolor={blue},
+              urlcolor={red},
+              pdfauthor={Vakgroep Data-analyse},
+              pdfpagemode=none,bookmarks=false
+              ]{hyperref}
+%\fi
+
+%% sweave related
+%\newboolean{Sweave@gin}
+%\setboolean{Sweave@gin}{true}
+%\DeclareOption{nogin}{\setboolean{Sweave@gin}{false}}
+%\ProcessOptions
+%\ifthenelse{\boolean{Sweave@gin}}{\setkeys{Gin}{width=0.8\textwidth}}{}%
+%\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+%\DefineVerbatimEnvironment{Soutput}{Verbatim}{fontsize=\footnotesize}
+%\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+%
+%\newenvironment{Schunk}{}{}
+
+
+% upquote.sty
+\RequirePackage{textcomp}
+\begingroup
+\catcode`'=\active
+\catcode``=\active
+\g@addto@macro\@noligs
+   {\let`\textasciigrave
+    \let'\textquotesingle}
+\endgroup
+
+
+%% xspace package
+%% prevents the swallowing of blanks that follow a command....
+\usepackage{xspace}
+
+% use bm package for bold math symbols
+\usepackage{bm}
+
+% The vector 'x', 'y', ...
+\renewcommand{\v}[1]{\ensuremath{\bm{\mathrm{#1}}}}
+
+% Estimated vector \hat{x} ...
+\newcommand{\ev}[1]{\ensuremath{\bm{{\hat{\mathrm{#1}}}}}}
+
+% Mean vector \bar{x} ...
+\newcommand{\mv}[1]{\ensuremath{\bm{{\bar{\mathrm{#1}}}}}}
+
+% Greek vector
+\renewcommand{\b}[1]{\ensuremath{\bm{#1}}}
+
+
+%% statistische termen
+\newcommand{\pmid}{\! \mid \!}
+\newcommand{\E}{\textrm{E}}
+\newcommand{\Var}{\textsf{Var}}
+\newcommand{\Cov}{\textsf{Cov}}
+\newcommand{\Cor}{\textsf{Cor}}
+
+% afkortingen
+\newcommand{\ie}{i.e.,\xspace}
+\newcommand{\eg}{e.g.,\xspace}
+\newcommand{\eq}{Eq.\xspace}
+\newcommand{\eqs}{Eqs.\xspace}
+
+% newcommands
+\newcommand{\een}{\'{e}\'{e}n\xspace}
+\newcommand{\geen}{g\'{e}\'{e}n\xspace}
+\newcommand{\meer}{m\'{e}\'{e}r\xspace}
+\newcommand{\Een}{E\'{e}n\xspace}
+\newcommand{\voor}{v\'{o}\'{o}r\xspace}
+\newcommand{\Voor}{V\'{o}\'{o}r\xspace}
+
+\newcommand{\cofs}{co\"{e}ffici\"{e}nten\xspace}
+\newcommand{\cof}{co\"{e}ffici\"{e}nt\xspace}
+\newcommand{\etc}{etc\ldots\xspace}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+
+\newcommand{\vink}{\boxempty \!\!\!\! \mbox{}^{\surd} \,\,} 
+
+
+%
+%
+% Boxed Sections....
+%
+\newcommand{\fsection}[1]{\section*{\framebox[\textwidth]{{\Large #1}}}}       
+
+%
+% alfabetic lists
+%
+
+\newcount\@aldepth \@aldepth = 0
+
+\@definecounter{ali}
+\@definecounter{alii}
+\@definecounter{aliii}
+\@definecounter{aliv}
+\def\alist{\ifnum \@aldepth >3 \@toodeep\else
+  \advance\@aldepth \@ne
+  \edef\@alctr{al\romannumeral\the\@aldepth}\list
+  {\csname label\@alctr\endcsname}{\usecounter
+    {\@alctr}\def\makelabel##1{\hss\llap{##1}}}\fi}
+\let\endalist =\endlist
+
+\def\labelali{(\theali)}
+\def\theali{\alph{ali}}
+\def\labelalii{(\thealii)}
+\def\thealii{\alph{alii}}
+\def\labelaliii{(\thealiii)}
+\def\thealiii{\alph{aliii}}
+\def\labelaliv{(\thealiv)}
+\def\thealiv{\alph{aliv}}
+
+\newcount\@Aldepth \@Aldepth = 0
+
+\@definecounter{Ali}
+\@definecounter{Alii}
+\@definecounter{Aliii}
+\@definecounter{Aliv}
+
+\def\Alist{\ifnum \@Aldepth >3 \@toodeep\else
+  \advance\@Aldepth \@ne
+  \edef\@alctr{Al\romannumeral\the\@Aldepth}\list
+  {\csname label\@alctr\endcsname}{\usecounter
+    {\@alctr}\def\makelabel##1{\hss\llap{##1}}}\fi}
+\let\endAlist =\endlist
+
+\def\labelAli{\theAli.}
+\def\theAli{\Alph{Ali}}
+\def\labelAlii{\theAlii.}
+\def\theAlii{\Alph{Alii}}
+\def\labelAliii{\theAliii.}
+\def\theAliii{\Alph{Aliii}}
+\def\labelAliv{\theAliv.}
+\def\theAliv{\Alph{Aliv}}
+
+
+%% definities voor opstellen van oefeningen
+
+\newboolean{SPSS}
+\newboolean{R}
+\newboolean{OPLOSSING}
+\newboolean{OPGAVE}
+\setboolean{OPGAVE}{true}
+\newboolean{PSYCH}
+\newboolean{PED}
+\newboolean{PP}
+\newboolean{PC}
+
+%% tex conditionals
+\newif\ifSPSSflag
+\newif\ifRflag
+\newif\ifOPLOSSINGflag
+\newif\ifPPflag
+\newif\ifPCflag
+\newif\ifPEDflag
+\newif\ifPSYCHflag
+\newif\ifANTWOORDflag
+
+%% default values
+\SPSSflagtrue
+\Rflagtrue
+\OPLOSSINGflagtrue
+\PPflagtrue
+\PCflagtrue
+\PEDflagtrue
+\PSYCHflagtrue
+\ANTWOORDflagtrue
+
+%% SPSS logo
+\newcommand{\SPSSLOGO}{\noindent{\scshape \tiny \fbox{SPSS / PASW}}}
+\newcommand{\RLOGO}{\noindent{\scshape \tiny \fbox{R}}}
+
+
+\usepackage{verbatim}
+
+%% environments
+\newenvironment{opgave}{\ifOPLOSSINGflag \itshape \else \upshape \fi}{}
+\newenvironment{oplossing}{\ifOPLOSSINGflag\else\comment\fi}{\ifOPLOSSINGflag\else\endcomment\fi}
+\newenvironment{ped}{\ifPEDflag\else\comment\fi}{\ifPEDflag\else\endcomment\fi}
+\newenvironment{psych}{\ifPSYCHflag\else\comment\fi}{\ifPSYCHflag\else\endcomment\fi}
+\newenvironment{antwoord}{\ifANTWOORDflag\else\comment\fi}{\ifANTWOORDflag\else\endcomment\fi}
+\newenvironment{pp}{\ifPPflag\subsubsection*{Pen en Papier oplossing}\else\comment\fi}{\ifPPflag\else\endcomment\fi}
+\newenvironment{pc}{\ifPCflag\subsubsection*{Computer oplossing}\else\comment\fi}{\ifPCflag\else\endcomment\fi}
+\newenvironment{rcode}{\ifRflag\begin{quotation}\RLOGO\\*[2pt]\small\else\comment\fi}{\ifRflag\end{quotation}\else\endcomment\fi}
+\newenvironment{spss}{\ifSPSSflag\begin{quotation}\SPSSLOGO\\*[2pt]\small\else\comment\fi}{\ifSPSSflag\end{quotation}\else\endcomment\fi}
+
+\newcommand\PED[1]{%
+  \ifthenelse{\boolean{PED}}{
+      #1
+  }{}
+}
+
+\newcommand\MANAMA[1]{%
+  \ifthenelse{\boolean{MANAMA}}{
+      #1
+  }{}
+}
+
+
+\newcommand\PSYCH[1]{%
+  \ifthenelse{\boolean{PSYCH}}{
+      #1
+  }{}
+}
+
+\newcommand\PC[1]{%
+  \ifthenelse{\boolean{PC}}{
+      #1
+  }{}
+}
+
+
+\newcommand\PP[1]{%
+  \ifthenelse{\boolean{PP}}{
+      #1
+  }{}
+}
+
+
+\newcommand\SPSS[1]{%
+  \ifthenelse{\boolean{SPSS}}{
+   \begin{quotation}
+      \noindent
+      {\scshape \tiny \fbox{SPSS / PASW}}\\
+      #1
+    \end{quotation}
+  }{}
+}
+
+\newcommand\R[1]{%
+  \ifthenelse{\boolean{R}}{
+    \begin{quotation}
+      \noindent
+      {\scshape \tiny \fbox{R}}\\
+      #1
+    \end{quotation}   
+  }{}
+}
+
+%\newcommand\OPLOSSING[1]{%
+%  \ifthenelse{\boolean{OPLOSSING}}{
+%  \mbox{}\\ \rule{4pt}{4pt}{\scshape \tiny \mbox{ }OPLOSSING\mbox{ }}\rule{4pt}{4pt}\\ 
+%  #1 
+%  \mbox{}\\*[0.1cm]}{}
+%}
+
+\newcommand\OPLOSSING[1]{%
+  \ifthenelse{\boolean{OPLOSSING}}{
+  #1
+  }{}
+}
+
+
+\newcommand\OPGAVE[1]{%
+  \ifthenelse{\boolean{OPGAVE}}{\ifthenelse{\boolean{OPLOSSING}}{\itshape}{}
+                            #1
+                            \ifthenelse{\boolean{OPLOSSING}}{\upshape}{}
+                           }{}
+}
+
+%% slides
+%\newboolean{SLIDES}
+%\newcommand\SLIDES[1]{%
+%  \ifthenelse{\boolean{SLIDES}}{
+%      #1
+%  }{}
+%}
+
+
+
+%%%% gevonden op internet: een 'bigbox' omgeving
+
+
+\ifx\documentclass\undefined
+\else
+  \ProcessOptions
+\fi
+\endinput
