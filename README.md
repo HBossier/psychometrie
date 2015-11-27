@@ -2,7 +2,7 @@
 
 ## Thema
 * Generaliseerbaarheidstheorie
-* Toelichting Additief en Multiplicatieve verhouding
+* IRT
 
 
 ## Structuur van files
@@ -10,7 +10,7 @@
 	* gen.tex: master file die verwijst naar generaliseerbaarheid.tex
 	* generaliseerbaarheid.tex: De effectieve oefeningen.
 	
-* Folder 2: IRT
+* Folder 2: IRT : Toelichting Add. en Multipl. verhouding
 	* additief_multiplicatief.tex : volledige oplossing
 
 ## Members
