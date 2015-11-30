@@ -1,0 +1,60 @@
+\begin{figure}[H]
+\begin{adjustwidth}{}{-0in}
+\begin{center}
+\begin{tikzpicture}[
+scale=0.55,
+level distance=20mm,
+level 1/.style={sibling distance=36mm},
+level 2/.style={sibling distance=20mm},
+level 3/.style={sibling distance=12mm},
+level 4/.style={sibling distance=12mm}
+]
+
+\usetikzlibrary{shapes}
+\tikzstyle{c} = [draw, shape=rectangle, minimum size = 6mm]
+\tikzstyle{r} = [draw, shape=rectangle,minimum width=10mm]
+\tikzstyle{tr} = [draw,isosceles triangle, shape border rotate=90, anchor=north]
+
+\hspace*{-4.5 cm}
+
+\node[c] {$D_{1}$}
+child{node[c]{$P_{1}$}
+	child{node[c]{$K_{1}$}}
+	child{node[c]{$K_{\ldots}$}}
+	child{node[c]{$K_{10}$}}
+	}
+child{node[c]{$P_{2}$}
+	child{node[c]{$K_{\ldots}$}}
+	}
+child{node[c]{$P_{3}$}
+	child{node[c]{$K_{1}$}}
+	child{node[c]{$K_{\ldots}$}}
+	child{node[c]{$K_{10}$}}
+	}
+;\hspace*{4.5 cm}
+\node[c] {$D_{...}$}
+child{node[c]{$P_{...}$}
+	child{node[c]{$K_{\ldots}$}}
+	}
+;\hspace*{4.5 cm}
+\node[c] {$D_{50}$}
+child{node[c]{$P_{1}$}
+	child{node[c]{$K_{1}$}}
+	child{node[c]{$K_{\ldots}$}}
+	child{node[c]{$K_{10}$}}
+	}
+child{node[c]{$P_{2}$}
+	child{node[c]{$K_{\ldots}$}}
+	}
+child{node[c]{$P_{3}$}
+	child{node[c]{$K_{1}$}}
+	child{node[c]{$K_{\ldots}$}}
+	child{node[c]{$K_{10}$}}
+	}
+;
+
+\end{tikzpicture}
+\caption{D = delinquent, P = psycholoog en K = kaart. ``$\ldots$" = alle overige waarden. }\label{f.gen}
+\end{center}
+\end{adjustwidth}
+\end{figure}
