@@ -1,11 +1,8 @@
 
 \OPGAVE
 {
-\section{Generaliseerbaarheidsstudie}
+\section{Generaliseerbaarheidstheorie - Voorbeeld 1}
 
-\begin{enumerate}
-
-\item
 Het practicum ontwikkelingspsychologie II bestaat uit een schriftelijk verslag met 10 vragen dat elke student dient in te vullen. Deze worden door twee beoordelaars ge\"{e}valueerd waarbij elke beoordelaar alle 10 de vragen scoort.\\
 Na toepassing van een variantie-analyse wordt de volgende schatting van de variantiecomponenten bekomen:
 
@@ -29,10 +26,8 @@ Beoordelaar 1 zou dan enkel vraag 1-5 verbeteren, terwijl beoordelaar 2 vraag 6-
 Hoe ziet ons model eruit, gebruik makende van de symbolen $s$, $v$ en $b$?
 \item Bereken de generaliseerbaarheidsco\"{e}ffici\"{e}nt (G) voor deze nieuwe situatie ($b$).
 
-\item Stel, de verantwoordelijke lesgever vraagt zich af of wel alle 10 de vragen noodzakelijk zijn. Bepaal met behulp van een $D$-studie de hoeveelheid vragen die minimaal nodig is (gebruik makend van 2 beoordelaars) om een meetnauwkeurigheid van 0.85 te behouden.
+\item Stel, de verantwoordelijke lesgever vraagt zich af of wel alle 10 de vragen noodzakelijk zijn. Bepaal met behulp van een $D$-studie de hoeveelheid vragen die minimaal nodig is (gebruik makend van 2 beoordelaars) en toch een meetnauwkeurigheid van 0.85 te behouden.
 
-
-\end{enumerate}
 \end{enumerate}
 }
 
@@ -40,20 +35,16 @@ Hoe ziet ons model eruit, gebruik makende van de symbolen $s$, $v$ en $b$?
 {
 \textbf{Oplossingen}
 \begin{enumerate}
-
-\item
-\begin{enumerate}
 \item JUIST
 \item $s \times v(b)$ NOG FIGUUR AAN TOEVOEGEN
-\item De G-co\"{e}ffici\"{e}nt wordt als volgt berekend:
-\begin{enumerate}
+\item De G-co\"{e}ffici\"{e}nt wordt als volgt berekend:\\
 	% G-coefficient
-	\item
 	\begin{align}
 		G &=\dfrac{\sigma^2_{Obj~v.~met.}}{\sigma^2_{Obj~v.~met.}+ \sigma^2_{rel.~meting}} \label{eq.G1}
 	\end{align}
 	Houd voorts rekening met volgende niet te onderscheiden variantiecomponenten:~ \\
 	$ \bm{\hat{\sigma}^2_{sb}} $~en~$\bm{\hat{\sigma}^2_{sv, svb, e} }$.\\
+
   We berekenen hiervoor eerst $\sigma^2_{rel.~meting}$
   \begin{align*}
     \sigma^2_{rel.~meting} 	&=  \dfrac{\hat{\sigma}^2_{sb}}{n_b} + \dfrac{\hat{\sigma}^2_{sv,svb,e}}{n_v*n_b} \\
@@ -66,7 +57,6 @@ Hoe ziet ons model eruit, gebruik makende van de symbolen $s$, $v$ en $b$?
     G 	&=\dfrac{0.397}{0.397 + 0.0604}\\
       &=0.87
   \end{align*}
-\end{enumerate}
 \item We berekenen voor de vector \textbf{v} = \{9,8,7,6,5,4,3,2,1\}, aantal vragen die aangeboden worden, telkens de G-co\"{e}ffici\"{e}nt. Deze is gelijk aan:
 
 \begin{center}
@@ -79,24 +69,20 @@ G  & 0.$8623145$ & $0.855373$ & $0.8466108$ & $0.8352034$ & $0.8197398$ & $0.797
 \end{center}
 We besluiten dus dat 8 vragen voldoende zijn om een meetnauwkeurigheid van 0.85 te behalen.
 \end{enumerate}
-\end{enumerate}
 }
 
 
 \OPGAVE
 {
-\section{Generaliseerbaarheidstheorie - extra voorbeeld 2}
+\section{Generaliseerbaarheidstheorie - Voorbeeld 2}
 
-\begin{enumerate}
-
-\item
 Een verkorte vorm van de TAT (Thematic Apperception Test), bestaande uit 10 kaarten, wordt afgenomen bij 50
 jongvolwassen delinquenten ($d$).
 De TAT is zo opgesteld dat de juveniele delinquent bij elk van de 10 kaarten ($k$) een verhaal moet vertellen dat aansluit bij de tekening op de kaart.
 De tien verhalen werden op video opgenomen en later beoordeeld.
 3 klinische psychologen ($p$) beoordeelden elk de graad van \emph{rejection of authority} op een schaal van 0 tot 100.
-De finale score op de TAT is het gemiddelde van de 30 metingen per subject.
-[naar Hoofdstuk 8 oef 3.a uit Crocker and Algina (2008). \emph{Introduction to Classical and Modern Test Theory}.]
+De finale score op de TAT is het gemiddelde van de 30 metingen per subject. \footnote{
+Naar Hoofdstuk 8 oef 3.a uit Crocker and Algina (2008). \emph{Introduction to Classical and Modern Test Theory}.}
 
 \begin{center}
 \renewcommand{\arraystretch}{1.2}
@@ -122,7 +108,6 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 \end{itemize}
 \item Bereken voor het eerste scenario uit (d) de $G$-co\"{e}ffici\"{e}nt en voor het tweede scenario de index of dependability $\phi$. Waar ligt het verschil tussen beide maten?
 \end{enumerate}
-\end{enumerate}
 }
 
 \OPLOSSING
@@ -133,7 +118,7 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 \item $d \times k \times p$
 \item
 \begin{itemize}
-	\item Het opzet wordt hier: $s\times p\left(k\right)$ bijgevolg kunnen de variantiecomponenten $\sigma_p$ en $\sigma_{kp}$ niet onderscheiden worden van elkaar (wordt $\sigma_{pk,p}$) en ook $\sigma_{sp}$ kan niet van de residuele variantie-term worden onderscheiden (wordt $\sigma_{sp, spk,e}$). Dit zijn de te onderscheiden componenten:\\ Merk hierbij op dat het object van meting $d$ is. \\
+	\item Het opzet wordt hier: $d \times p\left(k\right)$ bijgevolg kunnen de variantiecomponenten $\sigma_p$ en $\sigma_{kp}$ niet onderscheiden worden van elkaar (wordt $\sigma_{pk,p}$) en ook $\sigma_{sp}$ kan niet van de residuele variantie-term worden onderscheiden (wordt $\sigma_{sp, spk,e}$). Dit zijn de te onderscheiden componenten:\\ Merk hierbij op dat het object van meting $d$ is. \\
 	\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
 	 & $ \hat{\sigma}^2_{d}$ & $ \hat{\sigma}^2_{k} $& $ \hat{\sigma}^2_{p,kp} $ & $ \hat{\sigma}^2_{dk}$ & $\hat{\sigma}^2_{kp} $ & $ \hat{\sigma}^2_{dp} $& $ \hat{\sigma}^2_{dp, dkp, e} $ \\ \hline
 	$\sigma$  			& $ 167.64 $ 			& $ 3.211 $ 			& $615.8+1.3  $ 			& $ 1.3 $				 & $. $	& $ . $& $ 1.2 + 84.7  $ \\
