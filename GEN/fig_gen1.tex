@@ -1,0 +1,54 @@
+\begin{figure}[H]
+\begin{adjustwidth}{}{-0in}
+\begin{center}
+\begin{tikzpicture}[
+scale=0.55,
+level distance=20mm,
+level 1/.style={sibling distance=56mm},
+level 2/.style={sibling distance=20mm},
+level 3/.style={sibling distance=12mm},
+level 4/.style={sibling distance=12mm}
+]
+
+\usetikzlibrary{shapes}
+\tikzstyle{c} = [draw, shape=rectangle, minimum size = 6mm]
+\tikzstyle{r} = [draw, shape=rectangle,minimum width=10mm]
+\tikzstyle{tr} = [draw,isosceles triangle, shape border rotate=90, anchor=north]
+
+\hspace*{-4.5 cm}
+
+\node[c] {$S_{1}$}
+child{node[c]{$B_{1}$}
+	child{node[c]{$V_{1}$}}
+	child{node[c]{$V_{\ldots}$}}
+	child{node[c]{$V_{5}$}}
+	}
+child{node[c]{$B_{2}$}
+	child{node[c]{$V_{6}$}}
+	child{node[c]{$V_{\ldots}$}}
+	child{node[c]{$V_{10}$}}
+	}
+;\hspace*{7 cm}
+\node[c] {$S_{2}$}
+child{node[c]{$B_{1}$}
+	child{node[c]{$V_{1}$}}
+	child{node[c]{$V_{\ldots}$}}
+	child{node[c]{$V_{5}$}}
+	}
+child{node[c]{$B_{2}$}
+	child{node[c]{$V_{6}$}}
+	child{node[c]{$V_{\ldots}$}}
+	child{node[c]{$V_{10}$}}
+	}
+;\hspace*{4.5 cm}
+\node[c] {$S_{...}$}
+child{node[c]{{...}}
+	child{node[c]{$\ldots$}}
+	}
+	;
+	
+\end{tikzpicture}
+\caption{S = subjecten, B = beoordelaars en V = vragen. ``$\ldots$" = alle overige waarden analoog aan $S_1$ en $S_{2}$. }\label{f.gen1}
+\end{center}
+\end{adjustwidth}
+\end{figure}
