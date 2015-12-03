@@ -17,32 +17,37 @@ level 4/.style={sibling distance=12mm}
 
 \hspace*{-4.5 cm}
 
-\node[c] {$D_{1~t.e.m.~25}$}
+\node[c] {$D_{1}$}
 child{node[c]{$P_{1}$}
 	child{node[c]{$K_{1}$}}
 	child{node[c]{$K_{2}$}}
 	child{node[c]{$K_{3}$}}
 	}
 child{node[c]{$P_{2}$}
-	child{node[c]{$K_{4}$}}
-	child{node[c]{$K_{5}$}}
-	child{node[c]{$K_{6}$}}
-	}
-;\hspace*{7 cm}
-\node[c] {$D_{26~t.e.m.~50}$}
-child{node[c]{$P_{3}$}
 	child{node[c]{$K_{1}$}}
 	child{node[c]{$K_{2}$}}
 	child{node[c]{$K_{3}$}}
 	}
-child{node[c]{$P_{4}$}
-	child{node[c]{$K_{4}$}}
-	child{node[c]{$K_{5}$}}
-	child{node[c]{$K_{6}$}}
+;\hspace*{4.5 cm}
+\node[c] {$D_{2-49}$}
+child{node[c]{$P_{...}$}
+	child{node[c]{$K_{1,2,3}$}}
+	}
+;\hspace*{4.5 cm}
+\node[c] {$D_{50}$}
+child{node[c]{$P_{99}$}
+	child{node[c]{$K_{1}$}}
+	child{node[c]{$K_{2}$}}
+	child{node[c]{$K_{3}$}}
+	}
+child{node[c]{$P_{100}$}
+	child{node[c]{$K_{1}$}}
+	child{node[c]{$K_{2}$}}
+	child{node[c]{$K_{3}$}}
 	}
 ;
 \end{tikzpicture}
-\caption{D = delinquent, P = psycholoog en K = kaart. }\label{f.gen2B}
+\caption{D = delinquent, P = psycholoog en K = kaart. ``$\ldots$" = alle overige waarden identiek aan $D_1$ en $D_{50}$ behalve unieke $p$'s per delinquent. }\label{f.gen2B}
 \end{center}
 \end{adjustwidth}
 \end{figure}
