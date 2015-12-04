@@ -51,9 +51,9 @@ Hoe ziet ons model eruit, gebruik makende van de symbolen $s$, $v$ en $b$?
 	We kunnen dus enkel gebruik maken van de volgende gegevens: \\
 	\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
 	 & $ \hat{\sigma}^2_{s}$ & $ \hat{\sigma}^2_{b} $& $ \hat{\sigma}^2_{v,vb} $ & $ \hat{\sigma}^2_{sb}$ & $\hat{\sigma}^2_{sv} $ & $ \hat{\sigma}^2_{vb} $& $ \hat{\sigma}^2_{sv, svb, e} $ \\ \hline
-	$\sigma$  			& $ 0.397 $ 			& $ 0.010 $ 			& $0.109+0.006  $ 			& $ 0.067 $				 & $. $	& $ . $& $ 0.314 + 0.224  $ \\
+	$\sigma^2 $  			& $ 0.397 $ 			& $ 0.010 $ 			& $0.109+0.006  $ 			& $ 0.067 $				 & $. $	& $ . $& $ 0.314 + 0.224  $ \\
 	$n_.$				& .						& 2					& 20				 		& 2			  		 & $. $	& $ . $&  20 \\ \hline
-	$\sigma / n$ 		& .						& 0.005				& 0.00575				 		& 0.0335			  	 & $. $	& $ . $&  0.269 \\ \hline
+	$\sigma^2 / n$ 		& .						& 0.005				& 0.00575				 		& 0.0335			  	 & $. $	& $ . $&  0.269 \\ \hline
 	\end{tabular} \\
 
   We berekenen hiervoor eerst $\sigma^2_{rel.~meting}$
@@ -115,10 +115,10 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 	Welke variantie-componenten kunnen niet meer van elkaar onderscheiden worden indien voor een geplande $D$-studie met evenveel delinquenten volgende opzetten gehanteerd worden:
 \begin{itemize}
 	\item $p_1$ beoordeelt vragen 1 en 4, $p_2$ vragen 5 en 8 en $p_3$ vragen 9 en 10?
-	\item De zware delinquenten in kwestie  zitten verspreid over 50 instellingen waarbij er per instelling slechts twee psychologen beschikbaar zijn. 
-	Per instelling behandelen de twee psychologen dezelfde kaarten $1-3$. door $p_1$ gescoord en kaarten $4-6$ door $p_2$; in de andere instelling ($p_3$ en $p_4$)werden kaarten $4-6$ gescoord door $p_4$ en de kaarten $1-3$ door $p_3$. 
+	\item De zware delinquenten in kwestie  zitten verspreid over 50 instellingen (1 per instelling) waarbij er per instelling slechts twee psychologen beschikbaar zijn (telkens twee andere psychologen). 
+	Per instelling behandelen deze twee psychologen altijd dezelfde drie kaarten: 1,2 en 3. 
 \end{itemize}
-\item Bereken voor het eerste scenario uit 4 de $G$-co\"{e}ffici\"{e}nt en voor het tweede scenario de index of dependability $\phi$. Waar ligt het verschil tussen beide maten?
+\item Bereken voor het eerste scenario uit 3 de $G$-co\"{e}ffici\"{e}nt en voor het tweede scenario de index of dependability $\phi$. Waar ligt het verschil tussen beide maten?
 \end{enumerate}
 }
 
@@ -128,7 +128,7 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 \begin{enumerate}
 \item $d \times p \times k$
 \input{fig_gen2}
-\item JUIST. In een volledig gekruist opzet kunnen steeds meer variantiecomponenten onderscheiden worden dan in om het even welk genest opzet dat gebruik dezelfde meetfacetten. 
+\item JUIST. In een volledig gekruist opzet kunnen steeds meer variantiecomponenten onderscheiden worden dan in om het even welk genest opzet dat gebruik maakt van dezelfde meetfacetten. 
 \item
 \begin{itemize}
 	\item Het opzet wordt hier: $d \times k\left(p\right)$ bijgevolg kunnen de variantiecomponenten $\hat{\sigma}^2_p$ en $\hat{\sigma}^2_{kp}$ niet onderscheiden worden van elkaar (wordt $\hat{\sigma}^2_{pk,p}$) en ook $\hat{\sigma}^2_{dk}$ kan niet van de residuele variantie-term worden onderscheiden (wordt $\hat{\sigma}^2_{dk, dpk,e}$). Dit zijn de te onderscheiden componenten:\\ Merk hierbij op dat het object van meting $d$ is. \\
@@ -136,11 +136,12 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 	 & $ \hat{\sigma}^2_{d}$ & $ \hat{\sigma}^2_{k} $& $ \hat{\sigma}^2_{p,kp} $ & $ \hat{\sigma}^2_{dk}$ & $\hat{\sigma}^2_{kp} $ & $ \hat{\sigma}^2_{dp} $& $ \hat{\sigma}^2_{dk, dkp, e} $ \\ \hline
 	$\sigma^2$  			& $ 167.64 $ 			& $ 3.211 $ 			& $615.8+1.3  $ 			& $ .$				 & $. $	& $ 84.7 $	 & $ 1.2 + 1.3  $ \\
 	$n_.$				& .						& 6						& 3*6				 		& $ .$		  		 & $. $	& $ 3 $		 &  3*6 \\ \hline
-	$\sigma / n$ 		& .						& 0.5352				& 34.2833				 	& $ .$			  	 & $. $	& $ 28.2333 $& 0.1389 \\ \hline
+	$\sigma^2 / n$ 		& .						& 0.5352				& 34.2833				 	& $ .$			  	 & $. $	& $ 28.2333 $& 0.1389 \\ \hline
 	\end{tabular} \\
 	De grafische weergave van dit opzet is het volgende:\\
 	\input{fig_gen2A}
 	
+<<<<<<< HEAD
 	\item Het opzet wordt hier: $k \times p(d)$ bijgevolg kunnen de variantiecomponenten $\hat{\sigma}^2_p$ en $\hat{\sigma}^2_{dp}$ niet onderscheiden worden en bovendien kan $\hat{\sigma}^2_{kp}$ van de residuele variantie-term worden onderscheiden ( deze wordt $\hat{\sigma}^2_{kp, dpk, e}$). Houd rekening met het verminderde aantal kaarten ($K$).\\Dit zijn de te onderscheiden componenten:\\ Merk hierbij opnieuw op dat het object van meting $d$ is. \\
 
 	\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
@@ -149,6 +150,16 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 	$\sigma^2$  			& $167.64$ 			    & $ 3.211 $  	& $615.8+84.7$   & $1.3$ & $ . $	& $ . $& $ 1.2 + 1.3$ \\
 	$n_.$ 				& . 					& $3$			& 2	  & $ 3$		  	 & $ . $ 	& $ . $&  $2 *3$ \\ \hline
 	$\sigma / n_.$      & .						& $1.0703 $		& $350.25$   & $0.4333$		 & $.$		& $ . $&  $0.4167$ \\ \hline
+=======
+	\item Het opzet wordt hier: $p\left(k\times d\right)$. Bijgevolg kunnen de variantiecomponenten $\hat{\sigma}^2_p$, $\hat{\sigma}^2_{kp}$ en $\hat{\sigma}^2_{pd}$ niet onderscheiden worden van de residuele variantie-term onderscheiden (wordt $\hat{\sigma}^2_{p, kp, pd, dpk, e}$). Houd rekening met het verminderde aantal kaarten ($K$).\\Dit zijn de te onderscheiden componenten:\\ Merk hierbij opnieuw op dat het object van meting $d$ is. \\
+
+	\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+	 & $ \hat{\sigma}^2_{d} $ & $ \hat{\sigma}^2_{k} $& $ \hat{\sigma}^2_{p} $ & $ \hat{\sigma}^2_{dk} $ & $ \hat{\sigma}^2_{dp} $ & $ \hat{\sigma}^2_{kp} $ &
+	 $\hat{\sigma}^2_{p, kp, dp, dpk, e}$ \\ \hline
+	$\sigma^2$  			& $167.64$ 			& $ 3.211 $  	& . 	  & $1.3$				 & $ . $	& $ . $& $ 1.2 + 1.3 +  615.8 +84.7$ \\
+	$n_.$ 				& . 					& $3$			& .	  & $ 3$		  		 & $ . $ 	& $ . $&  $2 *3$ \\ \hline
+	$\sigma^2 / n_.$      & .						& $1.0703 $		& .   & $0.4333$			  	 & $.$	& $ . $&  103.2667 \\ \hline
+>>>>>>> origin/master
 	\end{tabular} \\
 	De grafische weergave van dit opzet is het volgende:\\
 
@@ -181,14 +192,18 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 		\phi =\dfrac{\sigma^2_{Obj~v.~met.}}{\sigma^2_{Obj~v.~met.}+ \sigma^2_{abs.~meting}} \label{eq.phi}
 	\end{align}
 	Houd voorts rekening met volgende niet te onderscheiden variantiecomponenten:~ \\
+<<<<<<< HEAD
 	$\hat{\sigma}^2_{p, dp}$ en .\\
+=======
+	$\bm{\hat{\sigma}^2_p},\bm{\hat{\sigma}^2_{dp}} , \bm{\hat{\sigma}^2_{kp}} \text{ en } \bm{\hat{\sigma}^2_{dkp, e}}$.\\
+>>>>>>> origin/master
 	We berekenen hiervoor eerst $\sigma^2_{abs.~meting}$
 	\begin{align*}
 		\sigma^2_{abs.~meting} 	&=  \dfrac{\hat{\sigma}^2_{k}}{n_k} + \dfrac{\hat{\sigma}^2_{p, dp}}{n_p} \\
 								&=  \dfrac{{3.122}}{3} + \dfrac{{615.8+84.7}}{2}\\
 								&=  1.0703 + 350.25 &= 351.3203
 	\end{align*}
-	Bijgevolg kan $\phi$ opgesteld worden door $\sigma^2_{abs}$ en $\hat{\sigma}^2_{d}$ in te vullen in vergelijking \ref{eq.phi}:
+	Bijgevolg kan $\phi$ opgesteld worden door $\sigma^2_{abs. meting}$ en $\hat{\sigma}^2_{d}$ in te vullen in vergelijking \ref{eq.phi}:
 	\begin{align*}
 		\phi 	&=\dfrac{167.64}{167.64+  351.3203}\\
 				&=\dfrac{167.64}{518.9603}=0.3230
