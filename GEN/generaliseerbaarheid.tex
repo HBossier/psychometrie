@@ -141,14 +141,14 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 	De grafische weergave van dit opzet is het volgende:\\
 	\input{fig_gen2A}
 	
-	\item Het opzet wordt hier: $k \times p(d)$ bijgevolg kunnen de variantiecomponenten $\hat{\sigma}^2_p$ en $\hat{\sigma}^2_{dp}$ niet onderscheiden worden en bovendien kan $\hat{\sigma}^2_{kp}$ van de residuele variantie-term worden onderscheiden ( deze wordt $\hat{\sigma}^2_{kp, dpk, e}$). Houd rekening met het verminderde aantal kaarten ($K$).\\Dit zijn de te onderscheiden componenten:\\ Merk hierbij opnieuw op dat het object van meting $d$ is. \\
+	\item Het opzet wordt hier: $p(d) \times k$ bijgevolg kunnen de variantiecomponenten $\hat{\sigma}^2_p$ en $\hat{\sigma}^2_{dp}$ niet onderscheiden worden en bovendien kan $\hat{\sigma}^2_{kp}$ van de residuele variantie-term worden onderscheiden ( deze wordt $\hat{\sigma}^2_{kp, dpk, e}$). Houd rekening met het verminderde aantal kaarten ($K$).\\Dit zijn de te onderscheiden componenten:\\ Merk hierbij opnieuw op dat het object van meting $d$ is. \\
 
 	\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
 	 & $ \hat{\sigma}^2_{d} $ & $ \hat{\sigma}^2_{k} $& $ \hat{\sigma}^2_{p, dp} $ & $ \hat{\sigma}^2_{dk} $ & $ \hat{\sigma}^2_{dp} $ & $ \hat{\sigma}^2_{kp} $ &
 	 $\sigma^2_{kp, dpk, e}$ \\ \hline
 	$\sigma^2$  			& $167.64$ 			    & $ 3.211 $  	& $615.8+84.7$   & $1.3$ & $ . $	& $ . $& $ 1.2 + 1.3$ \\
 	$n_.$ 				& . 					& $3$			& 2	  & $ 3$		  	 & $ . $ 	& $ . $&  $2 *3$ \\ \hline
-	$\sigma / n_.$      & .						& $1.0703 $		& $350.25$   & $0.4333$		 & $.$		& $ . $&  $0.4167$ \\ \hline
+	$\sigma^2 / n_.$      & .						& $1.0703 $		& $350.25$   & $0.4333$		 & $.$		& $ . $&  $0.4167$ \\ \hline
 	\end{tabular} \\
 	De grafische weergave van dit opzet is het volgende:\\
 
@@ -186,14 +186,14 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 
 	We berekenen hiervoor eerst $\sigma^2_{abs.~meting}$
 	\begin{align*}
-		\sigma^2_{abs.~meting} 	&=  \dfrac{\hat{\sigma}^2_{k}}{n_k} + \dfrac{\hat{\sigma}^2_{p, dp}}{n_p} \\
-								&=  \dfrac{{3.122}}{3} + \dfrac{{615.8+84.7}}{2}\\
-								&=  1.0703 + 350.25 &= 351.3203
+		\sigma^2_{abs.~meting} 	&=  \dfrac{\hat{\sigma}^2_{k}}{n_k} + \dfrac{\hat{\sigma}^2_{p, dp}}{n_p} + \dfrac{\hat{\sigma}^2_{dk}}{n_k} + \dfrac{\sigma^2_{kp, dpk, e}}{n_k*n_p}\\
+								&=  \dfrac{{3.122}}{3} + \dfrac{{615.8+84.7}}{2} + \dfrac{1.3}{3} +\dfrac{2.5}{6}\\
+								&=  1.0703 + 350.25 + 0.4333 +0.4167 &= 352.1703
 	\end{align*}
 	Bijgevolg kan $\phi$ opgesteld worden door $\sigma^2_{abs. meting}$ en $\hat{\sigma}^2_{d}$ in te vullen in vergelijking \ref{eq.phi}:
 	\begin{align*}
-		\phi 	&=\dfrac{167.64}{167.64+  351.3203}\\
-				&=\dfrac{167.64}{518.9603}=0.3230
+		\phi 	&=\dfrac{167.64}{167.64+  352.1703}\\
+				&=\dfrac{167.64}{519.8103}=0.3225
 	\end{align*}
 	\item $G$ is van toepassing zo men een relatieve meting beoogt, en dan spelen
 enkel de veriantiecomponenten omtrent de interactie van het object van meting
