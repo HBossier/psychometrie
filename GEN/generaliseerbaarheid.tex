@@ -131,12 +131,12 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 \item JUIST. In een volledig gekruist opzet kunnen steeds meer variantiecomponenten onderscheiden worden dan in om het even welk genest opzet dat gebruik maakt van dezelfde meetfacetten. 
 \item
 \begin{itemize}
-	\item Het opzet wordt hier: $d \times k\left(p\right)$ bijgevolg kunnen de variantiecomponenten $\hat{\sigma}^2_p$ en $\hat{\sigma}^2_{kp}$ niet onderscheiden worden van elkaar (wordt $\hat{\sigma}^2_{pk,p}$) en ook $\hat{\sigma}^2_{dk}$ kan niet van de residuele variantie-term worden onderscheiden (wordt $\hat{\sigma}^2_{dk, dpk,e}$). Dit zijn de te onderscheiden componenten:\\ Merk hierbij op dat het object van meting $d$ is. \\
+	\item Het opzet wordt hier: $d \times k\left(p\right)$ bijgevolg kunnen de variantiecomponenten $\hat{\sigma}^2_k$ en $\hat{\sigma}^2_{kp}$ niet onderscheiden worden van elkaar (wordt $\hat{\sigma}^2_{k,kp}$) en ook $\hat{\sigma}^2_{dk}$ kan niet van de residuele variantie-term worden onderscheiden (wordt $\hat{\sigma}^2_{dk, dpk,e}$). Dit zijn de te onderscheiden componenten:\\ Merk hierbij op dat het object van meting $d$ is. \\
 	\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
-	 & $ \hat{\sigma}^2_{d}$ & $ \hat{\sigma}^2_{k} $& $ \hat{\sigma}^2_{p,kp} $ & $ \hat{\sigma}^2_{dk}$ & $\hat{\sigma}^2_{kp} $ & $ \hat{\sigma}^2_{dp} $& $ \hat{\sigma}^2_{dk, dkp, e} $ \\ \hline
-	$\sigma^2$  			& $ 167.64 $ 			& $ 3.211 $ 			& $615.8+1.3  $ 			& $ .$				 & $. $	& $ 84.7 $	 & $ 1.2 + 1.3  $ \\
-	$n_.$				& .						& 6						& 3*6				 		& $ .$		  		 & $. $	& $ 3 $		 &  3*6 \\ \hline
-	$\sigma^2 / n$ 		& .						& 0.5352				& 34.2833				 	& $ .$			  	 & $. $	& $ 28.2333 $& 0.1389 \\ \hline
+	 & $ \hat{\sigma}^2_{d}$ & $ \hat{\sigma}^2_{p} $& $ \hat{\sigma}^2_{k,kp} $ & $ \hat{\sigma}^2_{dk}$ & $\hat{\sigma}^2_{kp} $ & $ \hat{\sigma}^2_{dp} $& $ \hat{\sigma}^2_{dk, dkp, e} $ \\ \hline
+	$\sigma^2$  			& $ 167.64 $ 			& $ 615.8 $ 			& $3.211+1.3  $ 			& $ .$				 & $. $	& $ 84.7 $	 & $ 1.2 + 1.3  $ \\
+	$n_.$				& .						& 3						& 3*6				 		& $ .$		  		 & $. $	& $ 3 $		 &  3*6 \\ \hline
+	$\sigma^2 / n$ 		& .						& 205.2667			& 0.2506				 	& $ .$			  	 & $. $	& $ 28.2333 $& 0.1389 \\ \hline
 	\end{tabular} \\
 	De grafische weergave van dit opzet is het volgende:\\
 	\input{fig_gen2A}
@@ -162,7 +162,7 @@ De gegevens uit de tabel kunnen gebruikt worden om volgende vragen te beantwoord
 \begin{itemize}
 	% G-coefficient
 	\item	Houd rekening met volgende niet te onderscheiden variantiecomponenten:~ 
-	$ \bm{\hat{\sigma}^2_{p,kp}} $~en~$\bm{\hat{\sigma}^2_{dk, dkp, e} }$.\\
+	$ \bm{\hat{\sigma}^2_{k,kp}} $~en~$\bm{\hat{\sigma}^2_{dk, dkp, e} }$.\\
 	We berekenen hiervoor eerst $\sigma^2_{rel.~meting}$
 	\begin{align*}
 		\sigma^2_{rel.~meting} 	&=  \dfrac{\hat{\sigma}^2_{dp}}{n_k} + \dfrac{\hat{\sigma}^2_{dk,dpk,e}}{n_p*n_k} \\
